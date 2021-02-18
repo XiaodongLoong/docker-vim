@@ -8,6 +8,8 @@ RUN apt-get update -y && \
 COPY .vim ~/
 COPY .vimrc ~/
 
+ADD sources.list /etc/apt/
+
 ENV GOPROXY https://goproxy.cn
 
 CMD ["bash"]
