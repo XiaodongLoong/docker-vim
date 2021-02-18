@@ -7,8 +7,8 @@ RUN apt-get update -y && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
-COPY .vim ~/
-COPY .vimrc ~/
+ADD .vim/ /root/.vim
+COPY .vimrc /root/
 
 ENV GOPROXY https://goproxy.cn
 
